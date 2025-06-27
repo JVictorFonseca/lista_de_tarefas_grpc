@@ -1,3 +1,6 @@
+# Iniciar servidor em raiz: go run go_server/main.go
+# Iniciar cliente em python-client: cd python_client python client.py
+
 # lista_de_tarefas_grpc# 🚀 Gerenciador de Tarefas Distribuído (gRPC com Go e Python) 🚀
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
