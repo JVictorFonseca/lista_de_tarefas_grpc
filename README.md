@@ -69,8 +69,8 @@ Certifique-se de ter instalado em sua máquina:
 
 Abra seu terminal (ou Prompt de Comando/PowerShell) e execute:
 
-```bash
-git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git) cd SEU_REPOSITORIO_CLONADO ```
+bash
+git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git) cd SEU_REPOSITORIO_CLONADO
 
 ### 2. Instalar Ferramentas e Gerar Código gRPC
 
@@ -80,7 +80,7 @@ Abra o **Visual Studio Code** na pasta raiz do projeto (`SEU_REPOSITORIO_CLONADO
 
 Na **raiz do projeto**, execute:
 
-```bash
+bash
 # Para Go
 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
@@ -111,7 +111,7 @@ go mod tidy
 3. Executar o Servidor Go
 
 
-⚠️ ATENÇÃO: CONFIGURAÇÃO DE FIREWALL ⚠️
+### ⚠️ ATENÇÃO: CONFIGURAÇÃO DE FIREWALL ⚠️
 Se você estiver rodando o servidor em um PC e o cliente em outro, ou se o cliente não conseguir conectar (Tempo limite de conexão esgotado), é CRUCIAL que você permita o python.exe e o go.exe (ou o executável gerado pelo Go) através do firewall do Windows Defender na máquina do servidor (portas TCP/UDP 50051).
 
 Abra um terminal na raiz do seu projeto.
@@ -119,7 +119,6 @@ Abra um terminal na raiz do seu projeto.
 Execute o servidor Go:
 
 Bash
-
 go run go_server/main.go
 
 Você verá a mensagem: Servidor gRPC ouvindo em :50051. Deixe este terminal aberto.
@@ -128,16 +127,16 @@ Você verá a mensagem: Servidor gRPC ouvindo em :50051. Deixe este terminal abe
 
 Abra outro terminal (ou Prompt de Comando/PowerShell).
 
-Navegue até a pasta do cliente:
-
+Navegue até a pasta do cliente: 
 cd python_client
+
+
 Execute o cliente Python:
-
-
 python client.py
+
 O cliente iniciará e exibirá um menu interativo.
 
-⚠️ ATENÇÃO: IP DO SERVIDOR ⚠️
+### ⚠️ ATENÇÃO: IP DO SERVIDOR ⚠️
 No código python_client/client.py, a variável server_address está configurada como 'localhost:50051'. Se o servidor Go estiver rodando em outro computador na sua rede, você precisará editar essa linha no client.py para o IP real do computador do servidor (ex: '192.168.1.100:50051').
 
 🎮 Como Usar (Interação com o Cliente)
