@@ -107,7 +107,10 @@ Bash
 
 go mod init lista_de_tarefas_grpc
 go mod tidy
+
 3. Executar o Servidor Go
+
+
 ⚠️ ATENÇÃO: CONFIGURAÇÃO DE FIREWALL ⚠️
 Se você estiver rodando o servidor em um PC e o cliente em outro, ou se o cliente não conseguir conectar (Tempo limite de conexão esgotado), é CRUCIAL que você permita o python.exe e o go.exe (ou o executável gerado pelo Go) através do firewall do Windows Defender na máquina do servidor (portas TCP/UDP 50051).
 
@@ -118,9 +121,11 @@ Execute o servidor Go:
 Bash
 
 go run go_server/main.go
+
 Você verá a mensagem: Servidor gRPC ouvindo em :50051. Deixe este terminal aberto.
 
 4. Executar o Cliente Python
+
 Abra outro terminal (ou Prompt de Comando/PowerShell).
 
 Navegue até a pasta do cliente:
@@ -169,4 +174,5 @@ Contribuições são bem-vindas! Se tiver sugestões ou melhorias, sinta-se à v
 📄 Licença
 Este projeto está licenciado sob a Licença MIT.
 
-Desenvolvido por: [Seu Nome/GitHub] Data: [Dia Mês, Ano] ```
+Desenvolvido por: joão victor da fonseca Dionisio 
+Data: 26/06/2025
